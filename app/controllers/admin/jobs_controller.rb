@@ -45,13 +45,6 @@ class Admin::JobsController < ApplicationController
     redirect_to adming_jobs_path
   end
 
-  def require_is_admin
-    if current_user.email != '1@1'
-      flash[:alert] = 'You are not admin'
-      redirect_to root_path
-    end
-  end
-
   private
 
   def job_params
